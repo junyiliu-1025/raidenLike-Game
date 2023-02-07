@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9894C054-58C3-4D80-86FC-DF6D6E2FD225}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WindowsApp3.My.MyApplication</StartupObject>
+    <RootNamespace>WindowsApp3</RootNamespace>
+    <AssemblyName>WindowsApp3</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>WindowsApp3.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>WindowsApp3.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="recordform.Designer.vb">
+      <DependentUpon>recordform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="recordform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="startform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="startform.Designer.vb">
+      <DependentUpon>startform.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="settingform.Designer.vb">
+      <DependentUpon>settingform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="settingform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bottleform.Designer.vb">
+      <DependentUpon>bottleform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="bottleform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hardsettingform.Designer.vb">
+      <DependentUpon>hardsettingform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="hardsettingform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="recordform.resx">
+      <DependentUpon>recordform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="startform.resx">
+      <DependentUpon>startform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="startform.zh-TW.resx">
+      <DependentUpon>startform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="settingform.resx">
+      <DependentUpon>settingform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bottleform.resx">
+      <DependentUpon>bottleform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hardsettingform.resx">
+      <DependentUpon>hardsettingform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="startform.zh.resx">
+      <DependentUpon>startform.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Live2D_13_u_01_00_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ring.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\02.-Decision.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01.-ホシノキズナ.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_8gr8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\250px-13_02_misheru.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\123.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\外空.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\更改背景音樂.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\姆咪2.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\姆咪姆咪.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\櫻花樹下.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Live2D_13_u_01_00_01%28已去底%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\超級姆咪.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\難度2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BOSS1遊戲用.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BOSS2遊戲用.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\美紀%28BOSS1劇情用%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\花音%28BOSS 2 遊戲用%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\花音%28BOSS 2 遊戲用%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\花音詩穗%28BOSS2 劇情用%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18_02_siho_burned.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18_02_siho_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18_02_siho_burned11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\250px-17_02_kanon_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\子彈.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\250px-16_02_sadone_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1%28已去底%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\輸入遊戲暱稱.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\姆咪姆咪1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\姆咪紀錄.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\玩家名稱.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\剩餘生命值.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\困難度.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\日期.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\遊戲分數.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\__%28BOSS 2 ___%29_burned 去背.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\__%28BOSS1___%29_burned 去背.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\____%28BOSS2 ___%29_burned 去背.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

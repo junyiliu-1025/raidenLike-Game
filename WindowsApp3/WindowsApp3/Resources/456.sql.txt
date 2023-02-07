@@ -1,0 +1,158 @@
+If (enemybullet = False) Then
+            If (kind <> 5) Then
+
+                For i = 0 To 9
+                    If (enemyarr(i).Visible = True) Then
+                        bulletarr(i).Location = New Point(enemyarr(i).Location.X + (enemyarr(i).Size.Width - bulletarr(i).Size.Width) / 2, enemyarr(i).Location.Y)
+                        bulletarr(i).Visible = True
+                    End If
+                Next
+            End If
+            If (kind = 5) Then
+                For i = 0 To 4
+                    bulletarr(i).Location = New Point(-1000, -1000)
+                Next
+            End If
+
+        Else
+            If (stage1.Enabled = True Or stage2.Enabled = True) Then
+                If (kind = 1 Or kind = 3 Or kind = 4 Or kind = 6 Or kind = 8) Then
+                    For i = 0 To 9
+                        If (enemyarr(i).Visible = True) Then
+                            bulletarr(i).Top += 5
+                            If (bulletarr(i).Top - bulletarr(i).Size.Height > Me.ClientSize.Height) Then
+                                bulletarr(i).Location = New Point(enemyarr(i).Location.X + (enemyarr(i).Size.Width - bulletarr(i).Size.Width) / 2, enemyarr(i).Location.Y)
+                                bulletarr(i).Visible = True
+                            End If
+                        Else
+                            If (bulletarr(i).Top - bulletarr(i).Size.Height < Me.ClientSize.Height) Then
+                                bulletarr(i).Top += 5
+
+                            End If
+                        End If
+                    Next
+                ElseIf (kind = 7) Then
+                    For i = 0 To 1
+                        If (enemyarr(i).Visible = True) Then
+                            bulletarr(i).Top += 5
+                            If (bulletarr(i).Top - bulletarr(i).Size.Height > Me.ClientSize.Height) Then
+                                bulletarr(i).Location = New Point(enemyarr(i).Location.X + (enemyarr(i).Size.Width - bulletarr(i).Size.Width) / 2, enemyarr(i).Location.Y)
+                                bulletarr(i).Visible = True
+                            End If
+                        Else
+                            If (bulletarr(i).Top - bulletarr(i).Size.Height < Me.ClientSize.Height) Then
+                                bulletarr(i).Top += 5
+
+                            End If
+                        End If
+                    Next
+                    For i = 2 To 3
+                        If (enemyarr(i).Visible = True) Then
+                            bulletarr(i).Left += 5
+                            If (bulletarr(i).Top < 0 Or bulletarr(i).Top - bulletarr(i).Size.Height > Me.ClientSize.Height Or bulletarr(i).Left < 0 Or bulletarr(i).Left + bulletarr(i).Width > GroupBox1.Left) Then
+                                bulletarr(i).Location = New Point(enemyarr(i).Location.X + (enemyarr(i).Size.Width - bulletarr(i).Size.Width) / 2, enemyarr(i).Location.Y)
+                                bulletarr(i).Visible = True
+                            End If
+                        Else
+                            If (bulletarr(i).Left - bulletarr(i).Width * 2 < GroupBox1.Left) Then
+                                bulletarr(i).Left += 5
+
+                            End If
+                        End If
+                    Next
+                    For i = 4 To 5
+                        If (enemyarr(i).Visible = True) Then
+                            bulletarr(i).Top -= 5
+                            If (bulletarr(i).Top < 0 Or bulletarr(i).Top - bulletarr(i).Size.Height > Me.ClientSize.Height Or bulletarr(i).Left < 0 Or bulletarr(i).Left + bulletarr(i).Width > GroupBox1.Left) Then
+                                bulletarr(i).Location = New Point(enemyarr(i).Location.X + (enemyarr(i).Size.Width - bulletarr(i).Size.Width) / 2, enemyarr(i).Location.Y)
+                                bulletarr(i).Visible = True
+                            End If
+                        Else
+                            If (bulletarr(i).Top - bulletarr(i).Size.Height < Me.ClientSize.Height) Then
+                                bulletarr(i).Top -= 5
+
+                            End If
+                        End If
+                    Next
+                    For i = 6 To 7
+                        If (enemyarr(i).Visible = True) Then
+                            bulletarr(i).Left -= 5
+                            If (bulletarr(i).Top < 0 Or bulletarr(i).Top - bulletarr(i).Size.Height > Me.ClientSize.Height Or bulletarr(i).Left < 0 Or bulletarr(i).Left + bulletarr(i).Width > GroupBox1.Left) Then
+                                bulletarr(i).Location = New Point(enemyarr(i).Location.X + (enemyarr(i).Size.Width - bulletarr(i).Size.Width) / 2, enemyarr(i).Location.Y)
+                                bulletarr(i).Visible = True
+                            End If
+                        Else
+                            If (bulletarr(i).Left + bulletarr(0).Width * 2 > 0) Then
+                                bulletarr(i).Left -= 5
+
+                            End If
+                        End If
+                    Next
+
+                ElseIf (kind = 5) Then
+                    If (enemyarr(0).Visible = True) Then
+                        bulletarr(0).Left += 5
+                        If (bulletarr(0).Top < 0 Or bulletarr(0).Top - bulletarr(0).Size.Height > Me.ClientSize.Height Or bulletarr(0).Left < 0 Or bulletarr(0).Left + bulletarr(0).Width > GroupBox1.Left) Then
+                            bulletarr(0).Location = New Point(enemyarr(0).Location.X + (enemyarr(0).Size.Width - bulletarr(0).Size.Width) / 2, enemyarr(0).Location.Y)
+                            bulletarr(0).Visible = True
+                        End If
+                    Else
+                        If (bulletarr(0).Left - bulletarr(0).Width < GroupBox1.Left) Then
+                            bulletarr(0).Left += 5
+
+                        End If
+                    End If
+                    If (enemyarr(1).Visible = True) Then
+                        bulletarr(1).Left -= 5
+                        If (bulletarr(1).Top < 0 Or bulletarr(1).Top - bulletarr(1).Size.Height > Me.ClientSize.Height Or bulletarr(1).Left < 0 Or bulletarr(1).Left + bulletarr(1).Width > GroupBox1.Left) Then
+                            bulletarr(1).Location = New Point(enemyarr(1).Location.X + (enemyarr(1).Size.Width - bulletarr(1).Size.Width) / 2, enemyarr(1).Location.Y)
+                            bulletarr(1).Visible = True
+                        End If
+                    Else
+                        If (bulletarr(1).Left + bulletarr(0).Width > 0) Then
+                            bulletarr(1).Left -= 5
+
+                        End If
+                    End If
+
+                    If (enemyarr(0).Visible = True) Then
+                        bulletarr(3).Top += 10
+                        If (bulletarr(3).Top - bulletarr(3).Size.Height > Me.ClientSize.Height) Then
+                            bulletarr(3).Location = New Point(enemyarr(0).Location.X + (enemyarr(0).Size.Width - bulletarr(3).Size.Width) / 2, enemyarr(0).Location.Y)
+                            bulletarr(3).Visible = True
+                        End If
+                    Else
+                        If (bulletarr(3).Top - bulletarr(3).Size.Height < Me.ClientSize.Height) Then
+                            bulletarr(3).Top += 10
+
+                        End If
+                    End If
+                    If (enemyarr(1).Visible = True) Then
+                        bulletarr(4).Top += 10
+                        If (bulletarr(4).Top - bulletarr(4).Size.Height > Me.ClientSize.Height) Then
+                            bulletarr(4).Location = New Point(enemyarr(1).Location.X + (enemyarr(1).Size.Width - bulletarr(4).Size.Width) / 2, enemyarr(1).Location.Y)
+                            bulletarr(4).Visible = True
+                        End If
+                    Else
+                        If (bulletarr(4).Top - bulletarr(4).Size.Height < Me.ClientSize.Height) Then
+                            bulletarr(4).Top += 10
+
+                        End If
+                    End If
+                    If (enemyarr(10).Visible = True) Then
+                        bulletarr(2).Top += 5
+                        If (bulletarr(2).Top < 0 Or bulletarr(2).Top - bulletarr(2).Size.Height > Me.ClientSize.Height Or bulletarr(2).Left < 0 Or bulletarr(2).Left + bulletarr(2).Width > GroupBox1.Left) Then
+                            bulletarr(2).Location = New Point(enemyarr(10).Location.X + (enemyarr(10).Size.Width - bulletarr(2).Size.Width) / 2, enemyarr(10).Size.Height)
+                            bulletarr(2).Visible = True
+                        End If
+                    Else
+                        If (bulletarr(2).Top - bulletarr(2).Size.Height < Me.ClientSize.Height) Then
+                            bulletarr(2).Top += 5
+                        End If
+
+                    End If
+                End If
+
+
+            End If
+        End If
